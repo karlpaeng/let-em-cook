@@ -67,7 +67,7 @@ public class Splashr extends AppCompatActivity {
 
         // Set up the VideoView
         videoView.setVideoURI(uri);
-        
+
         videoView.setOnPreparedListener(mediaPlayer -> {
             cl.setVisibility(View.INVISIBLE);
         });
@@ -95,7 +95,6 @@ public class Splashr extends AppCompatActivity {
             }
         });
 
-        // Start playing the video
         videoView.start();
 
 

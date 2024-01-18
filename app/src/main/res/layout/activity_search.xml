@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Search">
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintBottom_toTopOf="@id/adViewHome"
+        app:layout_constraintTop_toBottomOf="@id/cl01"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_orange_round_big"
+        android:elevation="15dp"
+        android:layout_marginTop="-25dp"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/etSearchBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="15dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:inputType="text"
+            android:ems="10"
+            android:textSize="16dp"
+            android:hint="Enter any food, dish, or recipe"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_round"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tvSearchButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:elevation="10dp"
+            android:id="@+id/tvSearchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginRight="15dp"
+            android:drawableLeft="@drawable/ic_search_24"
+            android:drawableTint="@color/white"
+            android:background="@drawable/ripple_darkgray_round"
+            android:clickable="true"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="@id/etSearchBar"
+            app:layout_constraintBottom_toBottomOf="@id/etSearchBar"
+            app:layout_constraintLeft_toRightOf="@id/etSearchBar"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvNoResultIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="25dp"
+        android:textSize="16dp"
+        android:text="No Results"
+        android:gravity="center"
+        android:textColor="@color/dark_gray"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintTop_toBottomOf="@id/cl01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/rvRecipe"
+        android:drawableLeft="@drawable/ic_left_24"
+        android:drawableTint="@color/white"
+        android:clickable="true"
+        android:elevation="15dp"
+        android:background="@drawable/ripple_darkgray_round"/>
+
+    <TextView
+        android:id="@+id/tvForw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:layout_margin="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/rvRecipe"
+        android:drawableLeft="@drawable/ic_right_24"
+        android:drawableTint="@color/white"
+        android:clickable="true"
+        android:elevation="15dp"
+        android:background="@drawable/ripple_darkgray_round"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="@string/ad_unit_01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/progressBarCircular"
+        android:theme="@style/progressBarCircular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl01"
+        app:layout_constraintBottom_toTopOf="@id/adViewHome"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

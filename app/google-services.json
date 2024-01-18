@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1053771537078",
+    "project_id": "simpleapikeyremoteconfig",
+    "storage_bucket": "simpleapikeyremoteconfig.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053771537078:android:bf09a6183db5dd95c76417",
+        "android_client_info": {
+          "package_name": "dev.karl.letemcook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoyKdpgsl4buqLSQqO4GuT7pZkjlTjKTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

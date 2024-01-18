@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".RecipeViewer">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvRecipeTitle"
+        app:layout_constraintLeft_toLeftOf="@id/tvRecipeTitle"
+        app:layout_constraintRight_toRightOf="@id/tvRecipeTitle"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                app:layout_constraintTop_toBottomOf="@id/cl03">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/shape_white_round_big"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <TextView
+                    android:id="@+id/tvRecipeActIngredientsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Ingredients:"
+                    android:textSize="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:id="@+id/tvRecipeActIngredients"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="ingredients_ingredients"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/tvRecipeActIngredientsLabel"/>
+                <TextView
+                    android:id="@+id/tvRecipeActServingLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Serving size:"
+                    android:textSize="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/tvRecipeActIngredients"/>
+                <TextView
+                    android:id="@+id/tvRecipeActServing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="Serving size"
+                    android:textSize="16dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/tvRecipeActServingLabel"/>
+
+                <TextView
+                    android:id="@+id/tvRecipeActInstructionsLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Instructions:"
+                    android:textSize="16dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/tvRecipeActServing"/>
+                <TextView
+                    android:id="@+id/tvRecipeActInstructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:text="instructions_instructions"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/tvRecipeActInstructionsLabel"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tvRecipeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:elevation="10dp"
+        android:text="dish_name"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:background="@drawable/shape_white_round"
+        app:layout_constraintTop_toBottomOf="@id/adViewRecipe"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:adSize="BANNER"
+        app:adUnitId="@string/ad_unit_01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.google.android.gms.ads.AdView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
